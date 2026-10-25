@@ -3797,6 +3797,57 @@ section,
   }
 }
 
+
+
+/* Restaurant reservation form */
+
+#reservation-content .form-control,
+#reservation-content .form-select {
+    background-color: #292929;
+    color: #eaeaea;
+    border: 1px solid #454545;
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+
+/* Placeholder text */
+#reservation-content .form-control::placeholder {
+    color: #a9a9a9;
+}
+
+/* Focus effect */
+#reservation-content .form-control:focus,
+#reservation-content .form-select:focus {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #e9a900;
+    box-shadow: 0 0 0 3px rgba(233, 169, 0, 0.12);
+}
+
+/* Dropdown options */
+#reservation-content .form-select option {
+    background-color: #292929;
+    color: #ffffff;
+}
+
+/* Date and time picker icons */
+#reservation-content input[type="date"],
+#reservation-content input[type="time"] {
+    color-scheme: dark;
+}
+
+/* Reservation button */
+#reservation-content .submit-btn {
+    background-color: #e9a900;
+    color: #171717;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
