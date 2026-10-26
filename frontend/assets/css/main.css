@@ -3848,6 +3848,83 @@ section,
 }
 
 
+/* Login and Registration */
+
+.auth-page {
+    min-height: 80vh;
+    padding: 130px 0 80px;
+}
+
+.auth-form {
+    background-color: #181818;
+    padding: 40px;
+    border: 1px solid #333333;
+    border-radius: 15px;
+}
+
+.auth-form h2 {
+    color: #ffffff;
+}
+
+.auth-form p {
+    color: #aaaaaa;
+}
+
+.auth-form .form-label {
+    color: #eeeeee;
+}
+
+.auth-form .form-control {
+    background-color: #292929;
+    color: #ffffff;
+    border: 1px solid #454545;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.auth-form .form-control::placeholder {
+    color: #aaaaaa;
+}
+
+.auth-form .form-control:focus {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #e9a900;
+    box-shadow: none;
+}
+
+.auth-btn {
+    width: 100%;
+    background-color: #e9a900;
+    color: #171717;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-btn:hover {
+    background-color: #ffbd24;
+}
+
+.auth-form a {
+    color: #e9a900;
+    text-decoration: none;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    .auth-form {
+        padding: 24px;
+    }
+}
+
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
