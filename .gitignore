@@ -1,0 +1,18 @@
+
+# Dependencies
+node_modules/
+vendor/
+
+# Backend logs
+backend/logs/*
+!backend/logs/.gitkeep
+
+# Sensitive configuration
+backend/config/config.php
+.env
+.env.*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
