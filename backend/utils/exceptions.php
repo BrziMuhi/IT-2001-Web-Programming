@@ -1,6 +1,22 @@
 <?php
 
-class ValidationException extends Exception
+class HttpException extends Exception
+{
+    protected $status;
+
+    public function __construct($message, $status)
+    {
+        parent::__construct($message, $status);
+        $this->status = $status;
+    }
+
+    public function get_status()
+    {
+        return $this->status;
+    }
+}
+
+class ValidationException extends HttpException
 {
     public function __construct($message)
     {
@@ -8,7 +24,7 @@ class ValidationException extends Exception
     }
 }
 
-class NotFoundException extends Exception
+class NotFoundException extends HttpException
 {
     public function __construct($message)
     {
@@ -16,7 +32,7 @@ class NotFoundException extends Exception
     }
 }
 
-class UnauthorizedException extends Exception
+class UnauthorizedException extends HttpException
 {
     public function __construct($message = 'You must be logged in.')
     {
@@ -24,7 +40,7 @@ class UnauthorizedException extends Exception
     }
 }
 
-class ForbiddenException extends Exception
+class ForbiddenException extends HttpException
 {
     public function __construct($message = 'You do not have permission to do this.')
     {
