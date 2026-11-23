@@ -22,4 +22,4 @@ Prompts I used are similar to this one:
 Based on my labs from weeks after dao layer(busines logics ,presenataion layer, open api etc) conscturst me a way of adjusting it to my project,dont go straight to work first lets brainstorm , and explain what you think is good to do, then i will do work and eventualy check against your answer"
 
 Cases when AI was wrong:
-It saw wrong a couple of times, mostly with naming conventions(camelCase, snake_case etc) which gave me trouble connecting for example DAO layer to services and simmilar.It was also wrong when implementing API endpoints, generating brkone api paths. I resolved it by using course github repository.
+It was wrong a couple of times, mostly with naming conventions(camelCase, snake_case etc) which gave me trouble connecting for example DAO layer to services and simmilar.It was also wrong when implementing API endpoints, generating brkone api paths. I resolved it by using course github repository.
