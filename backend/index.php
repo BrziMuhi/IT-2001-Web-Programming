@@ -7,6 +7,7 @@ require_once __DIR__ . '/services/RestaurantTableService.php';
 require_once __DIR__ . '/services/ReservationService.php';
 require_once __DIR__ . '/services/UserService.php';
 require_once __DIR__ . '/services/ContactMessageService.php';
+require_once __DIR__ . '/services/OpenMeteoService.php';
 
 Flight::register('category_service', 'CategoryService');
 Flight::register('menu_item_service', 'MenuItemService');
@@ -14,6 +15,7 @@ Flight::register('table_service', 'RestaurantTableService');
 Flight::register('reservation_service', 'ReservationService');
 Flight::register('user_service', 'UserService');
 Flight::register('contact_message_service', 'ContactMessageService');
+Flight::register('open_meteo_service', 'OpenMeteoService');
 
 Flight::map('error', function (Throwable $e) {
     if ($e instanceof HttpException) {
@@ -55,5 +57,6 @@ require_once __DIR__ . '/routes/TableRoutes.php';
 require_once __DIR__ . '/routes/ReservationRoutes.php';
 require_once __DIR__ . '/routes/UserRoutes.php';
 require_once __DIR__ . '/routes/ContactMessageRoutes.php';
+require_once __DIR__ . '/routes/WeatherRoutes.php';
 
 Flight::start();

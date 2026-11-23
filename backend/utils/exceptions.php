@@ -47,3 +47,11 @@ class ForbiddenException extends HttpException
         parent::__construct($message, 403);
     }
 }
+
+class ServiceUnavailableException extends HttpException
+{
+    public function __construct($message)
+    {
+        parent::__construct($message, 503);
+    }
+}

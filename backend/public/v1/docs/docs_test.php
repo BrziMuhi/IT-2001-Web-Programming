@@ -167,6 +167,12 @@ check('GET', '/users/2/contact-messages');
 check('GET', '/users/999/contact-messages');
 check('GET', '/users/0/contact-messages');
 
+check('GET', '/weather/forecast');
+check('GET', '/weather/forecast?city=a');
+check('GET', '/weather/forecast?city=Vitez&days=50');
+check('GET', '/weather/forecast?city=Nowhereville');
+check('GET', '/weather/forecast?city=Vitez&days=3');
+
 proc_terminate($server);
 proc_close($server);
 echo "\n" . ($undocumented === 0 ? 'Every answer is documented.' : "$undocumented answer(s) NOT DOCUMENTED.") . "\n";

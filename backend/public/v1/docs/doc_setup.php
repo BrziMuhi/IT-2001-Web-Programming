@@ -148,6 +148,28 @@ use OpenApi\Attributes as OA;
         ])
     ]
 )]
+#[OA\Schema(
+    schema: 'WeatherDay',
+    properties: [
+        new OA\Property(property: 'date', type: 'string', format: 'date', example: '2026-11-25'),
+        new OA\Property(property: 'weather_code', type: 'integer', example: 71),
+        new OA\Property(property: 'description', type: 'string', example: 'Light snow'),
+        new OA\Property(property: 'temperature_max', type: 'number', format: 'float', example: 5.5),
+        new OA\Property(property: 'temperature_min', type: 'number', format: 'float', example: -0.4),
+        new OA\Property(property: 'precipitation_probability', type: 'integer', nullable: true, example: 81)
+    ]
+)]
+#[OA\Schema(
+    schema: 'WeatherForecast',
+    properties: [
+        new OA\Property(property: 'city', type: 'string', example: 'Vitez'),
+        new OA\Property(property: 'country', type: 'string', nullable: true, example: 'Bosnia and Herzegovina'),
+        new OA\Property(property: 'latitude', type: 'number', format: 'float', example: 44.15806),
+        new OA\Property(property: 'longitude', type: 'number', format: 'float', example: 17.79),
+        new OA\Property(property: 'days', type: 'array', items: new OA\Items(ref: '#/components/schemas/WeatherDay')),
+        new OA\Property(property: 'source', type: 'string', example: 'Open-Meteo')
+    ]
+)]
 class DocSetup
 {
 }

@@ -56,6 +56,10 @@ function summary($json, $raw)
     if (isset($json['error'])) {
         return $json['error'];
     }
+    if (isset($json['source'])) {
+        $first = $json['days'][0] ?? null;
+        return "{$json['city']}, " . count($json['days']) . ' day(s)' . ($first ? ", first: {$first['date']} {$first['description']} {$first['temperature_min']} to {$first['temperature_max']} C" : '');
+    }
     if (isset($json['id'])) {
         return "id {$json['id']} - " . label($json);
     }
@@ -161,6 +165,13 @@ check('PUT', "/contact-messages/{$message['id']}", ['subject' => 'Checker messag
 check('DELETE', "/contact-messages/{$message['id']}");
 check('GET', '/users/2/contact-messages');
 check('GET', '/users/999/contact-messages');
+
+echo "\n=== weather (external API Open-Meteo) ===\n";
+check('GET', '/weather/forecast');
+check('GET', '/weather/forecast?city=a');
+check('GET', '/weather/forecast?city=Vitez&days=50');
+check('GET', '/weather/forecast?city=Nowhereville');
+check('GET', '/weather/forecast?city=Vitez&days=3');
 
 proc_terminate($server);
 proc_close($server);
