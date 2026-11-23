@@ -1,0 +1,68 @@
+/* Verdant custom styles - small additions on top of the template's main.css */
+
+/* Photo at the top of each menu card */
+/* The card itself has no padding and already rounds its corners,
+   so the photo sits flush at the top of the card. */
+.pricing .pricing-card .card-photo {
+  height: 180px;
+  overflow: hidden;
+}
+
+/* Keep the "Chef's Selection" tag above the photo */
+.pricing .pricing-card .popular-tag {
+  z-index: 2;
+}
+
+.pricing .pricing-card .card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pricing .pricing-card:hover .card-photo img {
+  transform: scale(1.05);
+}
+
+/* "From Our Kitchen" gallery on the home page */
+.kitchen-gallery .gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 260px;
+}
+
+.kitchen-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.kitchen-gallery .gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.kitchen-gallery .gallery-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 18px;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+/* About page image keeps a nice portrait shape */
+.about .image-wrapper img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+}
+
+/* CTA photo on the home page */
+.call-to-action .content-right img {
+  max-height: 420px;
+  object-fit: cover;
+}
